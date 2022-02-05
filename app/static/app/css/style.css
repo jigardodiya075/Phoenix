@@ -292,6 +292,11 @@ body, html {
   height: 60px;
 }
 
+.service .icon2{
+  width: 50px;
+  height: 50px;
+}
+
 .service h3{
   margin-left: 2rem;
   font-size: 3rem;
