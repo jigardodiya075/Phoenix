@@ -1,0 +1,129 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}PHOENIX SMART TECH{% endblock title %}
+
+{% block main-content %}
+
+<nav id="dot-nav"></nav>
+    <section class="bc-banner" id="home">
+        <div class="logo_animation_outer_wrapper">
+            <p id="bc-banner-text">PHOENIX SMART TECH</p>
+            <p id="bc-banner-text_home">We give you Wings!</p>
+        </div>
+    </section>
+    
+
+    <section class="aboutsec" id="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-12 aboutimgdiv">
+                    <img src="{% static 'app/images/about3.png' %}" alt="aboutimg">
+                </div>
+                <div class="col-md-5 col-12 abouttextdiv">
+                    <p id="abouthead">WHO WE ARE</p>
+                    <p id="abouttext">Phoenix Smart Tech is top IT company in Ahmedabad, India and Globally. We provide best IT solutions of website, mobile application, software development, SEO and graphic design. We have highly skill developer to give new look to your company's profile and It will definatily raised your sales into next level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicesec" id="services">
+        <div class="container">
+        <h1 class="servicehead"> WHAT WE PROVIDE </h1>
+        <div class="service">
+            <div>
+                <img src="{% static 'app/images/web_development-64.png' %}" class="icon" alt="Web_development">
+            </div>
+            <div>
+                <h3> Web Development </h3>
+                <p>Web development is about creating applications which run in a web browser. Phoenix Smart Tech Software is a leading and top web development company in India.</p>
+            </div>
+        </div>
+        <div class="service">
+            <div>
+                <img src="{% static 'app/images/app_development-64.png' %}" class="icon" alt="App_development">
+            </div>
+            <div>
+                <h3> Mobile App Development </h3>
+                <p>Phoenix Smart Tech offers you Android Apps and IOS Apps. We Develop high quality Android and IOS Apps, Applications for Mobiles and Tablets which are loved.</p>
+            </div>
+        </div>
+        <div class="service">
+            <div>
+                <img src="{% static 'app/images/software_development.png' %}" class="icon" alt="Digital Marketing">
+            </div>
+            <div>
+                <h3> Software Development </h3>
+                <p>The development of reliable and scalable software solutions for any OS, browser and device. We bring together deep industry expertise and the latest IT advancements to deliver custom solutions and products that perfectly fit the needs and behavior of their users.</p>
+            </div>
+        </div>
+        <div class="service">
+            <div>
+                <img src="{% static 'app/images/digital_marketing.png' %}" class="icon" alt="Digital Marketing">
+            </div>
+            <div>
+                <h3> Digital Marketing </h3>
+                <p>We help you design ROI based Digital Marketing Campaigns and Branding Campaigns to generate leads and new customers across all digital platforms.</p>
+            </div>
+        </div>
+        <div class="service">
+            <div>
+                <img src="{% static 'app/images/graphic_design.png' %}" class="icon" alt="Graphic Designing">
+            </div>
+            <div>
+                <h3> Graphic Designing </h3>
+                <p>A distinctive graphical theme can define your brand image in the eye of a customer, and do a great deal to promote your image to the general public.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <section class="portfoliosec" id="portfolio">
+        
+        <div class="container">
+            <h1 class="porthedaing">PORTFOLIO</h1>   
+             <div class="owl-carousel mt-3" id="slider3">
+              {% for m in images %}
+                <div class="item"><div class="mobilecarousal"><img src="{{m.portfolio_image.url}}" alt="portfolio"></div></div>
+              {% endfor %}
+             </div>
+          </div>
+    </section>
+
+    <section class="contactsec" id="contact">
+        <div class="container">
+            <p id="contacthead">Let's Get Together</p>
+            <p id="contacttext">Share your query and ideas with us!</p>
+            
+            <div class="col-md-4 col-12">
+                <form action="/contact/" method="post" >
+                    {% csrf_token %}
+                    <div class="form-group mb-2">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group mb-2">
+                    <input type="email" class="form-control" name="email" pattern="[^ @]*@[^ @]*" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group mb-2">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group mb-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Write your message" required></textarea>
+                    </div>
+                    <div class="text-center"><button type="submit">Send Message</button></div>
+                </form>
+            </div>
+
+              <p id="quickcontact">Quick Contact</p>
+              <p id="contacttext" class="pt-2"><i class="fas fa-envelope"></i>phoenixsmart.techs@gmail.com</p>
+              <p id="contacttext" class="pt-2"><i class="fas fa-phone-alt"></i>+91 82005 04333, +91 78743 75616</p>
+              <p id="contacttext" class="pt-2"><i class="fas fa-map-marker-alt"></i>GISC, LD College of Engineering,</p>
+              <p id="contacttext" class="location">Ahmedabad-380009, Gujarat, India</p>
+              <p id="contacttext"class="pt-2"><i class="fas fa-mobile-alt"></i>Brochure Download</p>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="{% static 'app/js/dot-nav.js' %}"></script>
+
+{% endblock main-content %}

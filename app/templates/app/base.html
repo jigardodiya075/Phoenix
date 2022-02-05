@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Other CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+
+    <link rel="shortcut icon" href="{% static 'app/images/logo3.png' %}" type="image/x-icon">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css">
+
+    <!--Owl Carousel CSS-->
+    <link rel="stylesheet" href="{% static 'app/css/owl.carousel.min.css' %}">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+
+    <!--Custom Responsive CSS-->
+    <link rel="stylesheet" href="{% static 'app/css/responsive.css' %}">
+
+    <title>{% block title %} {% endblock title %} </title>
+</head>
+<body>
+
+{% comment %} <body onload="loadingFunc()"> {% endcomment %}
+
+{% comment %} <div id="preloader"></div> {% endcomment %}
+
+<!-- <header id="header">
+  <div class="container">
+
+    <div id="logo" class="pull-left">
+      <a href="#hero"><img src="{% static 'app/images/logo2.png' %}" alt="" title="" /></img></a>
+    </div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+        <li class="menu-active"><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header> -->
+
+
+
+
+<header id="header" class="fixed-top autohide navmenu">
+  <div class="container d-flex align-items-center">
+
+    <!-- <h1 class="logo me-auto"><a href="#home">Arsha</a></h1> -->
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <a href="#home" class="logo me-auto"><img src="{% static 'app/images/logo2.png' %}" alt="" title="" /></a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">About</a></li>
+        <li><a class="nav-link scrollto" href="#services">Services</a></li>
+        <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header>
+
+
+    {% block main-content %} 
+    
+    {% endblock main-content %}
+
+
+    <footer id="footer">
+      <div class="container">
+        <div class="footermaindiv">
+            <div class="copyright">
+              &copy; 2022-Phoenix Smart Tech, Inc. All Rights Reserved.
+            </div>
+            <div class="social-links">
+              <a href="https://twitter.com/_Phoenix_Tech_" class="twitter" target="__blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.facebook.com/Phoenix-smart-tech-108219398444932" class="facebook" target="__blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/phoenix_smart_tech/" class="instagram" target="__blank"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/phoenix-smart-tech-59b46a22b" class="linkedin" target="__blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+      </div>
+  
+    </footer><!-- End Footer -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/superfish/1.7.10/js/superfish.min.js"></script> -->
+
+    
+    <!--Custom JS-->    
+    <script src="{% static 'app/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'app/js/main.js' %}"></script>
+
+    
+</body>
+</html>

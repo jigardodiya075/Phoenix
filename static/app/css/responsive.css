@@ -1,0 +1,107 @@
+@media(max-width: 768px) {
+
+      nav#dot-nav {
+        display: none;
+      }
+      
+      #header .logo img {
+        max-height: 45px;
+      }
+    
+      .bc-banner{
+          width: 100%;
+          height: 55vh!important;
+          background-image: linear-gradient(rgba(23, 28, 31, 0.555),rgba(3, 3, 3, 0.3)), url('../images/hero3.png');
+          padding: 0;
+      }
+      .bc-banner .logo_animation_outer_wrapper{        
+          align-items: flex-start;
+      }
+  
+      .bc-banner #bc-banner-text{
+          padding: 0 1rem;
+          font-size: 3.5rem;
+          line-height: 60px;
+      }
+      
+      .bc-banner  #bc-banner-text_home{
+          padding: 0 1rem;
+          font-size: 1.8rem;          
+      }
+      
+      .aboutsec .abouttextdiv{
+          padding: 0 2rem 2rem 2rem;
+          margin-top: -3rem;
+      }
+      
+      .aboutsec #abouthead{
+          font-size: 3rem;
+      }
+      
+      .aboutsec #abouttext{
+          font-size: 1.2rem;        
+      }
+  
+      .servicesec .servicehead{
+        font-size: 2.5rem;
+      }
+  
+      .service h3{
+        font-size: 2rem;
+      }
+  
+      .service p{
+        font-size: 1rem;
+      }
+  
+      #footer .copyright {
+        font-size: 0.7rem;
+      }
+      #footer .social-links a {
+        font-size: 0.8rem;
+        padding-left: 3px;
+      }
+  
+      .contactsec{
+        background-image: linear-gradient(rgba(196, 196, 196, 0.555),rgba(200, 200, 200, 0.3)), url('../images/earth3.png');
+      }
+  
+      .contactsec #contacthead{
+        font-size: 3rem;
+        line-height: 35px;
+      }
+      
+      .contactsec #contacttext{
+        font-size: 1.3rem;
+      }
+      
+      .contactsec #quickcontact{
+        font-size: 4rem;
+        line-height: 35px;
+      }
+
+      .owl-next, .owl-prev{
+        display: none;
+      }
+    }  
+
+    @media (min-width: 1024px) and (max-width: 1366px)  {
+        nav#dot-nav {
+            left: 10px; 
+          }
+
+        .bc-banner .logo_animation_outer_wrapper{        
+            align-items: flex-start;
+        }
+
+        .aboutsec{
+          padding: 1rem 0;
+        }
+
+        .aboutimgdiv img{
+        width: 70%;
+        height: 60%;
+      }
+  
+  
+    }
