@@ -28,7 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ["http://phoenixsmarttech.com/","https://phoenixsmarttech.com/",".phoenixsmarttech.com"]
+CSRF_TRUSTED_ORIGINS = ["http://phoenixsmarttech.com/","https://phoenixsmarttech.com/",".phoenixsmarttech.com",'https://*.phoenixsmarttech.com' , 'http://*.phoenixsmarttech.com',"*.phoenixsmarttech.com"]
 
 # Application definition
 
