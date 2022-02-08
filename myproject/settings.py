@@ -28,7 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ["https://phoenixsmarttech.azurewebsites.net/","http://phoenixsmarttech.azurewebsites.net/",".phoenixsmarttech.azurewebsites.net",".phoenixsmarttech.com","http://phoenixsmarttech.com/","https://phoenixsmarttech.com/"]
+CSRF_TRUSTED_ORIGINS = ["http://phoenixsmarttech.com/","https://phoenixsmarttech.com/",".phoenixsmarttech.com"]
 
 # Application definition
 
