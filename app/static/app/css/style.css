@@ -309,7 +309,7 @@ body, html {
   font-family: 'Reem Kufi', sans-serif;
 }
 
-.portfoliosec{
+/* .portfoliosec{
   background-color: #222222;
 }
 
@@ -332,7 +332,7 @@ body, html {
 
 .mobilecarousal img{
   max-height: 600px;
-}
+} */
 
 .contactsec {
   width: 100%;
@@ -362,6 +362,12 @@ body, html {
   font-weight: bold;
   line-height: 20px;
   font-family: 'Reem Kufi', sans-serif;
+}
+
+.contactsec #contacttext a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
 }
 
 .contactsec #quickcontact{
@@ -418,5 +424,63 @@ button{
 }
 
 
+#subscribe {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/subscribe-bg.jpg) fixed center center;
+  background-size: cover;
+  padding: 50px 0;
+}
 
-
+.counter-up .content{
+  z-index: 1;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.counter-up .content .box{
+  border: 1px dashed rgba(255,255,255,0.6);
+  width: calc(18% - 10px);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+}
+.content .box .icon{
+  font-size: 40px;
+  color: #e6e6e6;
+  margin-left: 1rem;
+}
+.content .box .counter{
+  font-size: 40px;
+  font-weight: 700;
+  color: #f2f2f2;
+  font-family: sans-serif;
+}
+.content .box .text{
+  font-weight: 400;
+  color: #ccc;
+}
+@media screen and (max-width: 1036px) {
+  .counter-up{
+    padding: 50px 50px 0 50px;
+  }
+  .counter-up .content .box{
+    width: calc(50% - 30px);
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .counter-up .content .box{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .counter-up{
+    padding: 30px 20px 0 20px;
+  }
+}

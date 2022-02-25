@@ -1,43 +1,3 @@
-// // Initiate superfish on nav menu
-// $('.nav-menu').superfish({
-//     animation: {opacity:'show'},
-//     speed: 400
-//   });
-  
-//   // Mobile Navigation
-//   if( $('#nav-menu-container').length ) {
-//       var $mobile_nav = $('#nav-menu-container').clone().prop({ id: 'mobile-nav'});
-//       $mobile_nav.find('> ul').attr({ 'class' : '', 'id' : '' });
-//       $('body').append( $mobile_nav );
-//       $('body').prepend( '<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>' );
-//       $('body').append( '<div id="mobile-body-overly"></div>' );
-//       $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
-      
-//       $(document).on('click', '.menu-has-children i', function(e){
-//           $(this).next().toggleClass('menu-item-active');
-//           $(this).nextAll('ul').eq(0).slideToggle();
-//           $(this).toggleClass("fa-chevron-up fa-chevron-down");
-//       });
-      
-//       $(document).on('click', '#mobile-nav-toggle', function(e){
-//           $('body').toggleClass('mobile-nav-active');
-//           $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-//           $('#mobile-body-overly').toggle();
-//       });
-      
-//       $(document).click(function (e) {
-//           var container = $("#mobile-nav, #mobile-nav-toggle");
-//           if (!container.is(e.target) && container.has(e.target).length === 0) {
-//              if ( $('body').hasClass('mobile-nav-active') ) {
-//                   $('body').removeClass('mobile-nav-active');
-//                   $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-//                   $('#mobile-body-overly').fadeOut();
-//               }
-//           }
-//       });
-//   } else if ( $("#mobile-nav, #mobile-nav-toggle").length ) {
-//       $("#mobile-nav, #mobile-nav-toggle").hide();
-//   }
 
   $('#slider3').owlCarousel({
     loop: true,
@@ -204,3 +164,44 @@
 		// if
 		
 	}); 
+
+
+
+  //counter
+  global = $('#number1').text()
+  globalmember = $('#number2').text()
+  localmember = $('#number3').text()
+  events = $('#number4').text()
+
+  $.fn.jQuerySimpleCounter = function( options ) {
+    var settings = $.extend({
+        start:  0,
+        end:    100,
+        easing: 'swing',
+        duration: 400,
+        complete: ''
+    }, options );
+  
+    var thisElement = $(this);
+  
+    $({count: settings.start}).animate({count: settings.end}, {
+    duration: settings.duration,
+    easing: settings.easing,
+    step: function() {
+      var mathCount = Math.ceil(this.count);
+      thisElement.text(mathCount);
+    },
+    complete: settings.complete
+  });
+  }
+  
+    $('.counter-up').waypoint({
+      handler: function() {
+        $('#number1').jQuerySimpleCounter({end: global,duration: 1000});
+        $('#number2').jQuerySimpleCounter({end: globalmember,duration: 2000});
+        $('#number3').jQuerySimpleCounter({end: localmember,duration: 2000});
+        $('#number4').jQuerySimpleCounter({end: events,duration: 2000});
+  
+    },
+    offset: '100%'
+  });

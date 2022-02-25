@@ -2,8 +2,14 @@ from django.shortcuts import render,redirect
 from .models import *
 # Create your views here.
 def home(request):
-    images = Portfolio.objects.all() 
-    context = {'images': images}
+    # images = Portfolio.objects.all() 
+    # context = {'images': images}
+    numbers= Counting.objects.get(id=1)
+    yearofestablishment = numbers.yearofestablishment
+    workinghours = numbers.workinghours
+    happyclient = numbers.happyclient
+    completedproject = numbers.completedproject
+    context = {'yearofestablishment':yearofestablishment,'workinghours':workinghours,'happyclient':happyclient,'completedproject':completedproject}
     return render(request, 'app/index.html',context)
 
 
