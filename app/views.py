@@ -4,7 +4,8 @@ from .models import *
 def home(request):
     # images = Portfolio.objects.all() 
     # context = {'images': images}
-    numbers= Counting.objects.get(id=1)
+    numbers= Counting.objects.all().last()
+    print(numbers)
     yearofestablishment = numbers.yearofestablishment
     workinghours = numbers.workinghours
     happyclient = numbers.happyclient
