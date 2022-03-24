@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python version
         uses: actions/setup-python@v1
         with:
-          python-version: '3.8'
+          python-version: '3.9'
 
       - name: Create and start virtual environment
         run: |
@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'phoenixsmarttech'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3309D04101DC420E8B5E4D3D7CF2F3F7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4674365ACFEE46FA9BB2D48BD20B74DC }}
